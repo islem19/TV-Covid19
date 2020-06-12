@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TV-Covid19</string>
+    <string name="developer_name">Abdelkader Sellami</string>
+    <string name="developer_position">Embedded Software Engineer | Android Platform Developer</string>
+    <string name="developer_description">A highly motivated and driven Embedded Software Engineer with a focus on Embedded Android, AOSP customization and application development. \nYou can get in touch with me at: \ngithub/islem19 \nlinkedin.com/in/abdelkader-sellami/</string>
+    <string name="recovered">Recovered:</string>
+    <string name="default_number">9,999,999</string>
+    <string name="deaths">Deaths:</string>
+    <string name="active">Active:</string>
+    <string name="overall_numbers">Overall Numbers</string>
+    <string name="today_numbers">Today\'s Numbers</string>
+    <string name="main_title">Covid-19 Stats</string>
+</resources>

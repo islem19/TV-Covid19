@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/title_overall_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/overall_numbers"
+        android:textSize="@dimen/big_title_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include
+        android:id="@+id/overall_active_case_item"
+        layout="@layout/active_case_layout"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_overall_tv"
+        app:layout_constraintRight_toLeftOf="@+id/overall_recover_case_item"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <include
+        android:id="@+id/overall_recover_case_item"
+        layout="@layout/recover_case_layout"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_overall_tv"
+        app:layout_constraintLeft_toRightOf="@id/overall_active_case_item"
+        app:layout_constraintRight_toLeftOf="@+id/overall_death_case_item"/>
+    <include
+        android:id="@+id/overall_death_case_item"
+        layout="@layout/death_case_layout"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_overall_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/overall_recover_case_item"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizental"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <TextView
+        android:id="@+id/title_today_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/today_numbers"
+        android:textSize="@dimen/big_title_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizental"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include
+        android:id="@+id/today_active_case_item"
+        layout="@layout/active_case_layout"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_today_tv"
+        app:layout_constraintRight_toLeftOf="@+id/today_recover_case_item"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <include
+        android:id="@+id/today_recover_case_item"
+        layout="@layout/recover_case_layout"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_today_tv"
+        app:layout_constraintLeft_toRightOf="@id/today_active_case_item"
+        app:layout_constraintRight_toLeftOf="@+id/today_death_case_item"/>
+    <include
+        android:id="@+id/today_death_case_item"
+        layout="@layout/death_case_layout"
+        android:layout_width="@dimen/card_item_width"
+        android:layout_height="@dimen/card_item_height"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_today_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/today_recover_case_item"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="big_title">50sp</dimen>
+    <dimen name="big_subtitle">25sp</dimen>
+    <dimen name="card_item_width">150dp</dimen>
+    <dimen name="card_item_height">150dp</dimen>
+    <dimen name="card_radius">20dp</dimen>
+    <dimen name="card_image_width">100dp</dimen>
+    <dimen name="card_image_height">100dp</dimen>
+    <dimen name="item_text_size">13sp</dimen>
+    <dimen name="big_title_size">40sp</dimen>
+    <dimen name="lottie_anim_width">350dp</dimen>
+    <dimen name="lottie_anim_height">350dp</dimen>
+</resources>
