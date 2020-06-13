@@ -17,6 +17,10 @@ public class CountryData implements Serializable {
     private CountryInfo countryInfo;
 
     @Expose
+    @SerializedName("continent")
+    private String continent;
+
+    @Expose
     @SerializedName("cases")
     private long nbrCases;
 
@@ -148,5 +152,13 @@ public class CountryData implements Serializable {
 
     public void setTodayRecovered(long todayRecovered) {
         this.todayRecovered = todayRecovered;
+    }
+
+    public String getContinent() {
+        return continent;
+    }
+
+    public void setContinent(String continent) {
+        this.continent = continent;
     }
 }
