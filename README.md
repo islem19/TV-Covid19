@@ -8,6 +8,10 @@ This is a simple Android TV App that fetches and displays the latest data and nu
 width="790"
     hspace="10" vspace="10">](screenshots/screenshot.gif)
 
+### Recommendation based on the country location (countries from same continent)
+[<img src="screenshots/screenshot_recommendation.gif" align="center"
+width="790"
+    hspace="10" vspace="10">](screenshots/screenshot_recommendation.gif)
 
 ## Setup
 Clone this repository and import into **Android Studio**
