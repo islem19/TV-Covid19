@@ -17,12 +17,24 @@ public class GlobalData implements Serializable {
     private long nbrCases;
 
     @Expose
+    @SerializedName("todayCases")
+    private long todayCases;
+
+    @Expose
     @SerializedName("deaths")
     private long nbrDeaths;
 
     @Expose
+    @SerializedName("todayDeaths")
+    private long todayDeaths;
+
+    @Expose
     @SerializedName("recovered")
     private long nbrRecovered;
+
+    @Expose
+    @SerializedName("todayRecovered")
+    private long todayRecovered;
 
     @Expose
     @SerializedName("updated")
@@ -73,6 +85,30 @@ public class GlobalData implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public long getTodayCases() {
+        return todayCases;
+    }
+
+    public void setTodayCases(long todayCases) {
+        this.todayCases = todayCases;
+    }
+
+    public long getTodayDeaths() {
+        return todayDeaths;
+    }
+
+    public void setTodayDeaths(long todayDeaths) {
+        this.todayDeaths = todayDeaths;
+    }
+
+    public long getTodayRecovered() {
+        return todayRecovered;
+    }
+
+    public void setTodayRecovered(long todayRecovered) {
+        this.todayRecovered = todayRecovered;
     }
 
     public int getImageResource(Context context) {

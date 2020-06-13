@@ -23,7 +23,7 @@ public class CountryDetailPresenter extends Presenter {
 
     @Override
     public Presenter.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.country_detail_layout, null);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.detail_layout, null);
         return new ViewHolder(view);
     }
 

@@ -24,19 +24,29 @@ public class GlobalDetailPresenter extends Presenter {
 
     @Override
     public Presenter.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.global_detail_layout, null);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.detail_layout, null);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, Object item) {
-        TextView active_cases_tv = mResourceCache.getViewById(viewHolder.view, R.id.active_cases_tv);
-        TextView recover_case_tv = mResourceCache.getViewById(viewHolder.view, R.id.recover_cases_tv);
-        TextView death_case_tv = mResourceCache.getViewById(viewHolder.view, R.id.death_cases_tv);
 
-        active_cases_tv.setText(Utils.decimalFormat(((GlobalData) item).getNbrCases()));
-        recover_case_tv.setText(Utils.decimalFormat(((GlobalData) item).getNbrRecovered()));
-        death_case_tv.setText(Utils.decimalFormat(((GlobalData) item).getNbrDeaths()));
+        TextView overall_active_cases_tv = mResourceCache.getViewById(mResourceCache.getViewById(viewHolder.view, R.id.overall_active_case_item), R.id.active_cases_tv);
+        TextView overall_recover_case_tv = mResourceCache.getViewById(mResourceCache.getViewById(viewHolder.view, R.id.overall_recover_case_item), R.id.recover_cases_tv);
+        TextView overall_death_case_tv = mResourceCache.getViewById(mResourceCache.getViewById(viewHolder.view, R.id.overall_death_case_item), R.id.death_cases_tv);
+
+        overall_active_cases_tv.setText(Utils.decimalFormat(((GlobalData) item).getNbrCases()));
+        overall_recover_case_tv.setText(Utils.decimalFormat(((GlobalData) item).getNbrRecovered()));
+        overall_death_case_tv.setText(Utils.decimalFormat(((GlobalData) item).getNbrDeaths()));
+
+
+        TextView today_active_cases_tv = mResourceCache.getViewById(viewHolder.view, R.id.today_active_case_item).findViewById(R.id.active_cases_tv);
+        TextView today_recover_case_tv = mResourceCache.getViewById(viewHolder.view, R.id.today_recover_case_item).findViewById(R.id.recover_cases_tv);
+        TextView today_death_case_tv = mResourceCache.getViewById(viewHolder.view, R.id.today_death_case_item).findViewById(R.id.death_cases_tv);
+
+        today_active_cases_tv.setText(Utils.decimalFormat(((GlobalData) item).getTodayCases()));
+        today_recover_case_tv.setText(Utils.decimalFormat(((GlobalData) item).getTodayRecovered()));
+        today_death_case_tv.setText(Utils.decimalFormat(((GlobalData) item).getTodayDeaths()));
 
     }
 
